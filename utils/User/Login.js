@@ -5,7 +5,7 @@ function Login(userInfo) {
                         data: { userInfo: userInfo }
                 }).then(res => {
                         wx.setStorageSync('userInfo', res.result.userInfo)
-                        resolve(res.result.userInfo)
+                        resolve(res)
                 }).catch(res => {
                         reject(res)
                 })
